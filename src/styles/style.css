@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+header {
+  margin-top: 1.3rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .logo {
+  margin-right: 12rem;
+  font-family: serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+nav .nav-list ul {
+  gap: 0.8rem;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+ul li a {
+  font-family: serif;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+ul li a:hover {
+  background-color: antiquewhite;
+}
+.hamburger-menu {
+  display: none;
+}
+/* Home Style */
+#home {
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#home article {
+  max-width: 50%;
+}
+#home article .title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 7px 0;
+}
+#home article .second-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0 0 8.3px 0;
+}
+#home article .description {
+  line-height: 25px;
+  margin-bottom: 1.2rem;
+}
+#home button {
+  color: antiquewhite;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  width: 8rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+#home button:hover {
+  background-color: aqua;
+  color: black;
+}
+aside {
+  border-radius: 50%;
+  background-color: blanchedalmond;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside img {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+}
+
+/* About Style */
+/* Skill Style */
+/* Contact Style */
+
+/* Footer Style */
+footer {
+  padding: 1 rem;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: antiquewhite;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: rgb(204, 116, 1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  #home {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: rgb(0, 250, 54);
+  }
+}
