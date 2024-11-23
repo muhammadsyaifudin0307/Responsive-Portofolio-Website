@@ -24,12 +24,15 @@
     display: none;
   }
 }
-
+body {
+  background-color: var(--bgcolor);
+}
 header {
   background-color: var(--bgcolor);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--textcolor-first);
 }
 nav {
   display: flex;
@@ -88,15 +91,21 @@ ul li a:hover {
 #home article .title {
   color: var(--textcolor-first);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 2.7rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 #home article .second-title {
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
   color: var(--btn-color);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 #home article .description {
+  font-family: "Roboto", sans-serif;
   color: #8e8e93;
   line-height: 1.8;
   margin-bottom: 1.2rem;
@@ -132,24 +141,52 @@ aside img {
 
 #about {
   padding: 5rem;
-  background-color: var(--textcolor-first);
+}
+#about .title {
+  color: var(--textcolor-first);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
   text-align: center;
+  font-size: 2rem;
 }
 
-.about {
+.about-body {
+  margin-top: -80px;
   height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-.about article {
+.about-body article {
   flex: 1;
   max-width: 50%;
 }
+.about-body article .description {
+  font-family: "Roboto", sans-serif;
+  color: var(--textcolor-desc);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-body article button {
+  cursor: pointer;
+  font-weight: 800;
+  border: none;
+  width: 8rem;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  background-color: var(--btn-color);
+  color: var(--textcolor-second);
+  transition: background-color 0.3s ease;
+}
+.about-body article button:hover {
+  background-color: var(--btn-hover);
+}
+
 /* Skill Style */
 #skill {
-  background-color: antiquewhite;
   padding: 5rem;
 }
 #skill .title {
@@ -170,30 +207,24 @@ aside img {
 /* Contact Style */
 #contact {
   height: 100vh;
-  background-color: aqua;
+  padding: 5rem;
 }
 /* Footer Style */
 footer {
+  border-top: 1px solid var(--textcolor-first);
   padding: 1rem;
   text-align: center;
   color: var(--textcolor-first);
-  background-color: var(--bgcolor);
 }
 
 /* Responsive */
 @media only screen and (max-width: 600px) {
-  #home {
-    background-color: antiquewhite;
-  }
 }
 
 @media only screen and (min-width: 600px) {
 }
 
 @media only screen and (max-width: 768px) {
-  #home {
-    background-color: #497a67;
-  }
   .hamburger-menu {
     display: block;
   }
@@ -238,6 +269,12 @@ footer {
   #home {
     flex-direction: column-reverse;
     padding: 2rem;
+  }
+  #home article .title {
+    font-size: 2rem;
+  }
+  #home article .second-title {
+    font-size: 1rem;
   }
   #home article,
   #about article {
